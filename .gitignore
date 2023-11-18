@@ -1,2 +1,5 @@
 # Secret Key
 usuarios/secret.json
+
+# Archivos y carpetas específicos de Visual Studio Code
+.vscode/
