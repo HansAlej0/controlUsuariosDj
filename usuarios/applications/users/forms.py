@@ -67,3 +67,23 @@ class LoginForm(forms.Form):
         if not authenticate(username=username,password=password):
             raise forms.ValidationError('Las credenciales no son correctas')
         return self.cleaned_data
+    
+class UpdatePasswordForm(forms.Form):
+    password1=forms.CharField(
+        label='Contraseña Actual',
+        required=True,
+        widget=forms.PasswordInput(
+            attrs={
+                'placeholder':'Contraseña Actual'
+            }
+        )
+    )
+    password2=forms.CharField(
+        label='Contraseña Nueva',
+        required=True,
+        widget=forms.PasswordInput(
+            attrs={
+                'placeholder':'Contraseña Nueva'
+            }
+        )
+    )
